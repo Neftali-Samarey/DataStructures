@@ -24,6 +24,8 @@ class LinkedList {
 		
 		LinkedList();
 		void createNode(int value);
+		void insert(int value);
+		void insertAtPosition(int position, int value);
 		void display();
 		~LinkedList();
 	

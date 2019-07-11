@@ -9,6 +9,8 @@ int main(int argc, char *argv[]) {
 	myList.createNode(8);
 	myList.createNode(10);
 	myList.createNode(5);
+	myList.insert(100);
+	
 	
 	myList.display();
 	

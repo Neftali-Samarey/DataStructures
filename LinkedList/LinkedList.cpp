@@ -34,6 +34,24 @@
 			tail = temp; 
 		}
 	}
+	
+	// INSERT
+	// This method will insert a new node with the value in front of the linked list.
+	void LinkedList::insert(int value) {
+		
+		// As usual, create a temp node
+		Node *temp = new Node;
+		
+		// Set temp node's data value to the value of the argument
+		temp->data = value;
+		
+		// Set temp's next pointer to be equal to head
+		temp->next = head;
+		
+		// set head to then be temp
+		head = temp;
+		
+	}
 
 	// Displaying node sequences
 	// Logic: We create a temp node and pass the address of the head node to it.
@@ -48,8 +66,19 @@
 			temp = temp-> next;
 		}
 	}
+	
+	// INSERT AT POSITION
+	// Logic: This will allow us to insert a new node at any given position within the bounds of the list.
+	// Arg 1: Position within the linked list,
+	// Arg 2
+	void LinkedList::insertAtPosition(int position, int value) {
+		
+		cout << "attempting to insert at position" << endl;
+	}
 
 	LinkedList::~LinkedList() {
 		// Some cleanup here
+		head = NULL;
+		tail = NULL;
 	}
 	
