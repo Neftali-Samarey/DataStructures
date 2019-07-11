@@ -1,27 +1,20 @@
 #include "LinkedList.h"
-// Node in Question
-struct Node {
-	int data;
-	Node *next;
-};
+
+// THIS CLASS IMPLEMENTS WHAT IS DEFINED IN THE HEADER FILE OF THE PART
+
 
 // Creation of a linked list
 // This class should have 2 important pointers: Head and Tail (both set to null on the constructor)
 
-class LinkedList {
 
-private:
-	Node *head, *tail;
-
-public:
 	// Set both head and tail to null to avoid any garbage value
-	LinkedList() {
+	LinkedList::LinkedList() {
 		head = NULL;
 		tail = NULL;
 	}
 
 	// Creation of a node
-	void createNode(int value) {
+	void LinkedList::createNode(int value) {
 
 		Node *temp = new Node;
 		temp->data = value;
@@ -46,18 +39,17 @@ public:
 	// Logic: We create a temp node and pass the address of the head node to it.
 	// Loop then iterates to as much as the amount of nodes there are.
 	// If temp node becomes equal to NULL, then the loop would terminate
-	void display() {
+	void LinkedList::display() {
 		Node *temp = new Node;
 		temp = head;
 
 		while (temp != NULL) {
-			cout << temp->data << "\t";
+			cout << temp->data << " -> ";
 			temp = temp-> next;
 		}
 	}
 
-	~LinkedList() {
+	LinkedList::~LinkedList() {
 		// Some cleanup here
 	}
 	
-};
