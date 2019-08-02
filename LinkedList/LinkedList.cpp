@@ -75,6 +75,8 @@
 		
 		cout << "attempting to insert at position" << endl;
 	}
+	
+
 
 	LinkedList::~LinkedList() {
 		// Some cleanup here
