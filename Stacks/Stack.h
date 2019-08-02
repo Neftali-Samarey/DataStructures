@@ -6,19 +6,23 @@
 
 using namespace std;
 
-// Make the class a generic to comform to any data type during storage
+// Generic class can comform to any type when initalizing it in the client driver
+
 template <class T>
 class Stack {
 	private:
-	vector<T> storage;
+	// In this example, for storage, we are using (or wrapping) this vector in this stack implementation
+	vector<T> storage; 
+	int storageCount;
 	
 	// Public Operations
 	public:
 		Stack();
 		void Push(T item);
-//		void Pop();
-//		T Peek();
-//		bool isEmpty;
+		bool isEmpty();
+		void Pop();
+		int Count();
+		T Peek();
 };
 
 
